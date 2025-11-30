@@ -1,0 +1,25 @@
+{
+  "name": "car-sharing-project-backend",
+  "version": "1.0.0",
+  "description": "Backend implementation of the Car Sharing application",
+  "homepage": "https://github.com/Mugara250/car-sharing-project-backend#readme",
+  "bugs": {
+    "url": "https://github.com/Mugara250/car-sharing-project-backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mugara250/car-sharing-project-backend.git"
+  },
+  "license": "ISC",
+  "author": "Mushi Mbonyumugara",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  }
+}
