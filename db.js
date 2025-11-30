@@ -9,40 +9,10 @@ const pool = new Pool({
   port: process.env.DB_PORT,
 });
 
-// pool.connect(async (err, client, release) => {
-//   if (err) {
-//     return console.error(err.stack);
-//   }
-//   console.log(`Successfully connected to ${process.env.DB_NAME}...`);
-//   client.query("SELECT * FROM users", (err, result) => {
-//     if (err) {
-//       return console.log("Query error", err.stack);
-//     }
-//     console.log("Result", result.rows);
-//   });
-//   client.query("SELECT * FROM cars", (err, result) => {
-//     if (err) {
-//       return console.log("Query error", err.stack);
-//     }
-//     console.log("Result", result.rows);
-//   });
-//   client.query("SELECT * FROM bookings", (err, result) => {
-//     if (err) {
-//       return console.log("Query error", err.stack);
-//     }
-//     console.log("Result", result.rows);
-//     release();
-//   });
-// });
-
 (async () => {
   try {
-    const users = await pool.query("SELECT * FROM users");
-    console.log(users.rows);
-    const cars = await pool.query("SELECT * FROM cars");
-    console.log(cars.rows);
-    const bookings = await pool.query("SELECT * FROM bookings");
-    console.log(bookings.rows);
+    await pool.query("SELECT 1");
+    console.log(`Successfully connected to ${process.env.DB_NAME}...`);
   } catch (error) {
     console.error(error.stack);
   }
