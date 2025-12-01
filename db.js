@@ -9,15 +9,6 @@ const pool = new Pool({
   port: process.env.DB_PORT,
 });
 
-(async () => {
-  try {
-    await pool.query("SELECT 1");
-    console.log(`Successfully connected to ${process.env.DB_NAME}...`);
-  } catch (error) {
-    console.error(error.stack);
-  }
-})();
-
 module.exports = pool;
 
 // const client = new Client({
